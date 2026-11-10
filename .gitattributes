@@ -1,0 +1,2 @@
+# Receipts, arguments and checksums depend on exact bytes: never convert line endings.
+* -text

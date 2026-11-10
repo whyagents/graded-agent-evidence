@@ -1,0 +1,11 @@
+self-check: L4 request -> 310 (expect 310); C2a g1 -> 13 (expect 13)
+before training test  acc 0.167 (majority-class baseline 0.833)
+before training novel acc 0.349 (majority-class baseline 0.651)
+step   20  ce 0.7194  drift 1.4422  test acc 0.845  6 s
+final train acc 0.607  label-token rate 1.000  min top-2 margin 0.003  per rule {'default_allow': '787/810', 'delete_wide': '0/83', 'email_leak': '25/130', 'http_exfil': '13/123', 'read_secret': '24/116', 'shell_danger': '52/108', 'write_system': '9/130'}
+final test  acc 0.845  label-token rate 1.000  min top-2 margin 0.003  per rule {'default_allow': '212/215', 'delete_wide': '0/4', 'email_leak': '3/21', 'http_exfil': '0/6', 'read_secret': '0/2', 'shell_danger': '3/8', 'write_system': '0/2'}
+final novel acc 0.664  label-token rate 1.000  min top-2 margin 0.001  per rule {'default_allow': '197/200', 'delete_wide': '0/8', 'email_leak': '0/40', 'http_exfil': '2/18', 'read_secret': '0/12', 'shell_danger': '5/20', 'write_system': '0/9'}
+wrote $HOME/c2b/ckpt/smoke.bin
+train 20.74 s 1147248 kB
+train_exit=0
+3302852ec4f7e266a0fdeeb8c6acc004493cf8676c17d8baeede2b775829ce32  $HOME/c2b/ckpt/smoke.bin

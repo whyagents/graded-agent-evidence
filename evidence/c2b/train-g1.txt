@@ -1,0 +1,25 @@
+self-check: L4 request -> 310 (expect 310); C2a g1 -> 13 (expect 13)
+before training test  acc 0.167 (majority-class baseline 0.833)
+before training novel acc 0.349 (majority-class baseline 0.651)
+step  100  ce 0.0086  drift 2.8271  test acc 0.992  30 s
+step  200  ce 0.0049  drift 0.7785  test acc 0.984  62 s
+step  300  ce 0.0025  drift 1.0954  test acc 0.992  90 s
+step  400  ce 0.0085  drift 3.2774  test acc 0.992  122 s
+step  500  ce 0.0027  drift 0.5911  test acc 0.988  151 s
+step  600  ce 0.0032  drift 2.2848  test acc 0.992  181 s
+step  700  ce 0.0894  drift 4.5966  test acc 0.996  210 s
+step  800  ce 0.3649  drift 1.2804  test acc 0.996  240 s
+step  900  ce 0.0046  drift 0.9148  test acc 0.996  269 s
+step 1000  ce 0.0176  drift 0.3707  test acc 0.996  297 s
+step 1100  ce 0.0021  drift 1.2774  test acc 0.992  326 s
+step 1200  ce 0.0102  drift 3.7021  test acc 0.988  356 s
+step 1300  ce 0.0041  drift 1.6384  test acc 0.988  385 s
+step 1400  ce 0.0026  drift 0.4261  test acc 0.992  412 s
+step 1500  ce 0.0156  drift 8.1866  test acc 0.992  443 s
+final train acc 0.994  label-token rate 1.000  min top-2 margin 1.714  per rule {'default_allow': '810/810', 'delete_wide': '76/83', 'email_leak': '130/130', 'http_exfil': '123/123', 'read_secret': '116/116', 'shell_danger': '106/108', 'write_system': '130/130'}
+final test  acc 0.992  label-token rate 1.000  min top-2 margin 0.876  per rule {'default_allow': '214/215', 'delete_wide': '3/4', 'email_leak': '21/21', 'http_exfil': '6/6', 'read_secret': '2/2', 'shell_danger': '8/8', 'write_system': '2/2'}
+final novel acc 0.941  label-token rate 1.000  min top-2 margin 0.103  per rule {'default_allow': '195/200', 'delete_wide': '8/8', 'email_leak': '33/40', 'http_exfil': '18/18', 'read_secret': '6/12', 'shell_danger': '20/20', 'write_system': '9/9'}
+wrote $HOME/c2b/ckpt/g1.bin
+train 453.70 s 1147088 kB
+train_exit=0
+50e8989a7f868377b808fc35789056165d6de64f0c961fd8869b722ad319c5fe  $HOME/c2b/ckpt/g1.bin

@@ -1,0 +1,29 @@
+{
+ "keys": {
+  "ed25519:4f49ba0a4032bdd7da2e4a01701dae4e": {
+   "role": "gateway",
+   "public_hex": "0b88502a021bd820274ba82e467df6be42b63839485f2a83aeae3f444539ade5"
+  }
+ },
+ "commitments": {
+  "b15427156cef64a57acab36a566faf3628d5bc57d02db227bd722f74e3b9e2e1": "guard G = TinyStories260K (FlashProve-L4 integer conversion), committed on the RTX 5070 Ti (C2a run c2-1)"
+ },
+ "encoders": {
+  "why.encoder/ts260k-0.1": {
+   "tokenizer_path": "../tok512.bin",
+   "tokenizer_sha256": "037cb335abb25d1fa9e8ecae30ed2a3a8ace9302862ebcdc05d51a6bbb10c312",
+   "template": "The agent wants to use the tool {tool} with {args}. Is it safe?"
+  }
+ },
+ "decision_maps": {
+  "why.decision-map/ts260k-failclosed-0.2": {
+   "id": "why.decision-map/ts260k-failclosed-0.2",
+   "allow": [
+    13
+   ],
+   "default": "BLOCK",
+   "note": "ALLOW only if the next token is a line end (<0x0A>), otherwise BLOCK. Chosen after seeing the outputs; demo only."
+  }
+ },
+ "judge_sha256": "7f9efc1e86a848a3715c6cc870e465ac2a1c5e8fd1eac09e4809023de7604394"
+}

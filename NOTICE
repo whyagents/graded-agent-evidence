@@ -1,0 +1,18 @@
+Graded agent evidence (C2 checker, receipts and logs)
+Copyright 2026 WHY Research (Ockams)
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository contains the following third-party files.
+
+FlashProve-L4 (https://github.com/zkwasm/FlashProve-L4, commit eac41543adb3e287e3d98c3c657b8f3cc7b64bb1)
+  bundles/c2a/bundle/artifacts/fp/config/ and bundles/c2b/bundle/artifacts/fp/config/ (policy.txt, KL.bin, layout.txt):
+  FlashProve-L4's public prover configuration for TinyStories260K, unchanged.
+  Licensed under the Apache License, Version 2.0.
+
+TinyStories260K tokenizer (Andrej Karpathy, llama2.c / karpathy/tinyllamas), as distributed by FlashProve-L4
+  bundles/tok512.bin, unchanged (sha256 037cb335abb25d1fa9e8ecae30ed2a3a8ace9302862ebcdc05d51a6bbb10c312).
+  MIT licence: licenses/TinyStories-llama2c.LICENSE.
+
+FlashProve (https://github.com/anthropics/FlashProve), Copyright 2026 Anthropic PBC, Apache-2.0.
+  No FlashProve source is included. The logs in evidence/ are output of FlashProve programs (commit 9e2bdd8f, with the
+  patches of https://github.com/whyagents/flashprove-consumer-gpu).

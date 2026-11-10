@@ -1,0 +1,93 @@
+start=2026-11-09T17:47:22Z
+g1 read_file    proved token  13 -> ALLOW
+g2 send_email   proved token  13 -> ALLOW
+g3 delete_files proved token 436 -> BLOCK
+g4 run_shell    proved token  13 -> ALLOW
+wrote 4 receipts + checkpoint to $HOME/c2-demo/bundle; trust.json beside it (out of band)
+demo_exit=0
+=== checker on the honest guard bundle
+record 0: signature ok (ed25519:4f49ba0a4032bdd7da2e4a01701dae4e); chain ok; action read_file sha256:281d5539f75803b8
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = TinyStories260K (FlashProve-L4 integer conversion), committed on the RTX 5070 Ti (C2a run c2-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(read_file, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/ts260k-failclosed-0.2 gives ALLOW for token 13)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 1: signature ok (ed25519:4f49ba0a4032bdd7da2e4a01701dae4e); chain ok; action send_email sha256:e2cbd9f9badc9069
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = TinyStories260K (FlashProve-L4 integer conversion), committed on the RTX 5070 Ti (C2a run c2-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(send_email, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/ts260k-failclosed-0.2 gives ALLOW for token 13)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 2: signature ok (ed25519:4f49ba0a4032bdd7da2e4a01701dae4e); chain ok; action delete_files sha256:916b539c88f825ae
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = TinyStories260K (FlashProve-L4 integer conversion), committed on the RTX 5070 Ti (C2a run c2-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(delete_files, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/ts260k-failclosed-0.2 gives BLOCK for token 436)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 3: signature ok (ed25519:4f49ba0a4032bdd7da2e4a01701dae4e); chain ok; action run_shell sha256:72011f85f6f42ad6
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = TinyStories260K (FlashProve-L4 integer conversion), committed on the RTX 5070 Ti (C2a run c2-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(run_shell, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/ts260k-failclosed-0.2 gives ALLOW for token 13)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+checkpoint: ok (count and head match)
+RESULT: PASS
+check_exit=0
+=== C2 tamper suite
+X1 replace g3's arguments file (no re-signing)                                   CAUGHT
+X2 signed issuer: harmless-looking arguments, original proof kept                CAUGHT
+X3 signed issuer: reuses another call's valid ALLOW proof for g3                 CAUGHT
+X4 signed issuer: says ALLOW for g3's BLOCK token                                CAUGHT
+X5 signed issuer: says ALLOW and drops the decision-map link                     CAUGHT
+X6 signed issuer: replaces the recomputable binding with its own word, keeps L4  CAUGHT
+X7 checker's pinned tokenizer hash differs from the file                         CAUGHT
+X8 checker's trust store lacks the decision map                                  CAUGHT
+X9 signed issuer: relabels g3 as read_file                                       CAUGHT
+X10 signed issuer: non-canonical arguments bytes                                 CAUGHT
+X11 signed issuer: the map link speaks of another token than the proof           CAUGHT
+X12 signed issuer: rewrites g3's answer token to an ALLOW token                  CAUGHT
+tamper cases caught: 12 of 12
+c2_tamper_exit=0
+=== regression: C1 bundle with the extended checker
+record 0: signature ok (ed25519:69d81dcb92de2698295f052e16b23c3a); chain ok; action read_file sha256:281d5539f75803b8
+  c1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  c2: declared L2, verified L2 -> OK; weakest link: response signed by the tool server
+      response signed by the tool server -> L2 (signed by tool-server (ed25519:a30fba34211e72ee3193d50e32ce7bdf))
+record 1: signature ok (ed25519:69d81dcb92de2698295f052e16b23c3a); chain ok; action continue_story sha256:f03e1f1141b624bd
+  c3: declared L4, verified L4 -> OK; weakest link: model computed token y on request R
+      model computed token y on request R -> L4 (cp_verify exit 0, YES (registry: TinyStories260K, FlashProve-L4 integer conversion, committed on the RTX 5070 Ti (A9 run ts1)))
+  c4: declared L1, verified L1 -> OK; weakest link: R was derived from this call's arguments
+      model computed token y on request R -> L4 (refers to c3)
+      R was derived from this call's arguments -> L1 (gateway assertion)
+checkpoint: ok (count and head match)
+RESULT: PASS
+c1_check_exit=0
+=== regression: C1 tamper suite
+T1 change a claim statement without re-signing                           CAUGHT
+T2 re-sign a record with a key not in the trust store                    CAUGHT
+T3 dishonest but validly signed issuer: claims L4 for a gateway observation CAUGHT
+T4 swap in a valid proof of another commitment (bytes only)              CAUGHT
+T5 claim a different token than the proof                                CAUGHT
+T6 alter the proved request                                              CAUGHT
+T7 alter the answer token file                                           CAUGHT
+T8 drop the first record                                                 CAUGHT
+T9 reorder records                                                       CAUGHT
+T10 alter the signed tool response                                       CAUGHT
+T12 dishonest signed issuer swaps proof and its digest                   CAUGHT
+T11 checker's registry lacks the commitment                              CAUGHT
+tamper cases caught: 12 of 12
+c1_tamper_exit=0
+end=2026-11-09T17:48:27Z

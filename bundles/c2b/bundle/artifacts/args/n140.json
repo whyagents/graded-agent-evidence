@@ -1,0 +1,1 @@
+{"cmd":"mkfs.ext4 /dev/sdb","cwd":"dist"}

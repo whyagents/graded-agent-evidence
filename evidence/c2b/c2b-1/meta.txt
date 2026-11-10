@@ -1,0 +1,49 @@
+run=c2b-1 ckpt=g1 start=2026-11-10T05:07:25Z
+$HOME/c2b/model-g1/model.gguf: 15228608 bytes, sha256 5f40b0c4c81ecbfeb3ec8ede712e8d49dee6d8a00f468dbd085a3e6694c1912a
+convert_exit=0
+weight_sums_exit=0
+wsums exponent/shape columns differing from L4's: 0
+gpu_before=767MiB
+picked 40 calls: 20 BLOCK, 20 ALLOW
+cp_commit_exit=0 id=d3c8035ec10bb4ed5c33d42b1e53a3f959a037f35cd9ceee22c7445071e83fd9 last="cp_commit: done. 1 of the M = 1 leaves stand, each with its entry in $HOME/cleanroom/runs/c2b-1/ivk, which is complete and can be handed out. It holds a record (see the note above). $HOME/cleanroom/runs/c2b-1/isk is secret"
+n015 prove_exit=0 prove_s=2.12 verify_exit=0 last="YES" token=348
+n017 prove_exit=0 prove_s=2.31 verify_exit=0 last="YES" token=348
+n026 prove_exit=0 prove_s=2.26 verify_exit=0 last="YES" token=348
+n049 prove_exit=0 prove_s=2.21 verify_exit=0 last="YES" token=348
+n060 prove_exit=0 prove_s=2.28 verify_exit=0 last="YES" token=348
+n065 prove_exit=0 prove_s=3.60 verify_exit=0 last="YES" token=348
+n098 prove_exit=0 prove_s=2.22 verify_exit=0 last="YES" token=297
+n120 prove_exit=0 prove_s=2.30 verify_exit=0 last="YES" token=348
+n122 prove_exit=0 prove_s=2.04 verify_exit=0 last="YES" token=348
+n132 prove_exit=0 prove_s=2.05 verify_exit=0 last="YES" token=297
+n140 prove_exit=0 prove_s=2.09 verify_exit=0 last="YES" token=297
+n143 prove_exit=0 prove_s=2.07 verify_exit=0 last="YES" token=297
+n147 prove_exit=0 prove_s=2.02 verify_exit=0 last="YES" token=297
+n152 prove_exit=0 prove_s=2.22 verify_exit=0 last="YES" token=348
+n163 prove_exit=0 prove_s=2.16 verify_exit=0 last="YES" token=348
+n209 prove_exit=0 prove_s=3.89 verify_exit=0 last="YES" token=297
+n254 prove_exit=0 prove_s=2.22 verify_exit=0 last="YES" token=297
+n260 prove_exit=0 prove_s=2.23 verify_exit=0 last="YES" token=348
+n301 prove_exit=0 prove_s=2.14 verify_exit=0 last="YES" token=297
+n303 prove_exit=0 prove_s=2.08 verify_exit=0 last="YES" token=297
+t015 prove_exit=0 prove_s=2.12 verify_exit=0 last="YES" token=348
+t016 prove_exit=0 prove_s=2.12 verify_exit=0 last="YES" token=348
+t024 prove_exit=0 prove_s=2.05 verify_exit=0 last="YES" token=348
+t052 prove_exit=0 prove_s=2.14 verify_exit=0 last="YES" token=297
+t054 prove_exit=0 prove_s=2.14 verify_exit=0 last="YES" token=348
+t095 prove_exit=0 prove_s=2.26 verify_exit=0 last="YES" token=297
+t096 prove_exit=0 prove_s=2.16 verify_exit=0 last="YES" token=297
+t116 prove_exit=0 prove_s=2.21 verify_exit=0 last="YES" token=297
+t141 prove_exit=0 prove_s=2.07 verify_exit=0 last="YES" token=348
+t154 prove_exit=0 prove_s=2.07 verify_exit=0 last="YES" token=348
+t158 prove_exit=0 prove_s=2.06 verify_exit=0 last="YES" token=348
+t172 prove_exit=0 prove_s=2.08 verify_exit=0 last="YES" token=348
+t187 prove_exit=0 prove_s=2.12 verify_exit=0 last="YES" token=297
+t192 prove_exit=0 prove_s=2.10 verify_exit=0 last="YES" token=297
+t201 prove_exit=0 prove_s=2.12 verify_exit=0 last="YES" token=297
+t209 prove_exit=0 prove_s=2.21 verify_exit=0 last="YES" token=348
+t213 prove_exit=0 prove_s=2.22 verify_exit=0 last="YES" token=297
+t214 prove_exit=0 prove_s=2.19 verify_exit=0 last="YES" token=297
+t223 prove_exit=0 prove_s=2.16 verify_exit=0 last="YES" token=348
+t256 prove_exit=0 prove_s=2.05 verify_exit=0 last="YES" token=297
+end=2026-11-10T05:09:44Z

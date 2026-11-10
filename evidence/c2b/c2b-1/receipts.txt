@@ -1,0 +1,109 @@
+start=2026-11-10T05:10:00Z
+n049 read_file    proved token 348 -> ALLOW
+n098 delete_files proved token 297 -> BLOCK
+n132 run_shell    proved token 297 -> BLOCK
+n140 run_shell    proved token 297 -> BLOCK
+n015 read_file    proved token 348 -> ALLOW
+n017 read_file    proved token 348 -> ALLOW
+n026 read_file    proved token 348 -> ALLOW
+n060 delete_files proved token 348 -> ALLOW
+wrote 8 receipts + checkpoint to $HOME/c2b/receipts-c2b-1/bundle; trust.json beside it (out of band)
+demo_exit=0
+=== checker
+record 0: signature ok (ed25519:9d14078c5d3cab2932c8f1d070d6f0b5); chain ok; action read_file sha256:03203edd17d8add6
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = WHY C2b guard (TinyStories260K fine-tuned on synthetic tool calls), our conversion, committed on the RTX 5070 Ti (run c2b-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(read_file, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/c2b-guard-0.1 gives ALLOW for token 348)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 1: signature ok (ed25519:9d14078c5d3cab2932c8f1d070d6f0b5); chain ok; action delete_files sha256:1e6f531be04c9ab8
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = WHY C2b guard (TinyStories260K fine-tuned on synthetic tool calls), our conversion, committed on the RTX 5070 Ti (run c2b-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(delete_files, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/c2b-guard-0.1 gives BLOCK for token 297)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 2: signature ok (ed25519:9d14078c5d3cab2932c8f1d070d6f0b5); chain ok; action run_shell sha256:075436a0a0545327
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = WHY C2b guard (TinyStories260K fine-tuned on synthetic tool calls), our conversion, committed on the RTX 5070 Ti (run c2b-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(run_shell, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/c2b-guard-0.1 gives BLOCK for token 297)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 3: signature ok (ed25519:9d14078c5d3cab2932c8f1d070d6f0b5); chain ok; action run_shell sha256:4c4d0fb1b0b1f718
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = WHY C2b guard (TinyStories260K fine-tuned on synthetic tool calls), our conversion, committed on the RTX 5070 Ti (run c2b-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(run_shell, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/c2b-guard-0.1 gives BLOCK for token 297)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 4: signature ok (ed25519:9d14078c5d3cab2932c8f1d070d6f0b5); chain ok; action read_file sha256:86e25eb893bd614b
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = WHY C2b guard (TinyStories260K fine-tuned on synthetic tool calls), our conversion, committed on the RTX 5070 Ti (run c2b-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(read_file, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/c2b-guard-0.1 gives ALLOW for token 348)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 5: signature ok (ed25519:9d14078c5d3cab2932c8f1d070d6f0b5); chain ok; action read_file sha256:2e851a3935611dc0
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = WHY C2b guard (TinyStories260K fine-tuned on synthetic tool calls), our conversion, committed on the RTX 5070 Ti (run c2b-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(read_file, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/c2b-guard-0.1 gives ALLOW for token 348)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 6: signature ok (ed25519:9d14078c5d3cab2932c8f1d070d6f0b5); chain ok; action read_file sha256:d5c9352c15f8bd01
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = WHY C2b guard (TinyStories260K fine-tuned on synthetic tool calls), our conversion, committed on the RTX 5070 Ti (run c2b-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(read_file, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/c2b-guard-0.1 gives ALLOW for token 348)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+record 7: signature ok (ed25519:9d14078c5d3cab2932c8f1d070d6f0b5); chain ok; action delete_files sha256:5f2100bfac6b71bf
+  a1: declared L1, verified L1 -> OK; weakest link: call observed
+      call observed -> L1 (gateway assertion)
+  a2: declared L4, verified L4 -> OK; weakest link: G computed token y on request R
+      G computed token y on request R -> L4 (cp_verify exit 0, YES (registry: guard G = WHY C2b guard (TinyStories260K fine-tuned on synthetic tool calls), our conversion, committed on the RTX 5070 Ti (run c2b-1)))
+      R = E(tool, arguments) of this call -> L4 (recomputed by the checker: request = E(delete_files, arguments) byte for byte)
+      token y means the decision under the pinned map -> L4 (recomputed by the checker: map why.decision-map/c2b-guard-0.1 gives ALLOW for token 348)
+  a3: declared L1, verified L1 -> OK; weakest link: decision enforced
+      decision enforced -> L1 (gateway assertion)
+checkpoint: ok (count and head match)
+RESULT: PASS
+check_exit=0
+=== C2 tamper suite on the trained guard's bundle
+BLOCK record 1 (delete_files), ALLOW record 0 (read_file, token 348)
+X1 replace g3's arguments file (no re-signing)                                   CAUGHT
+X2 signed issuer: harmless-looking arguments, original proof kept                CAUGHT
+X3 signed issuer: reuses another call's valid ALLOW proof for g3                 CAUGHT
+X4 signed issuer: says ALLOW for g3's BLOCK token                                CAUGHT
+X5 signed issuer: says ALLOW and drops the decision-map link                     CAUGHT
+X6 signed issuer: replaces the recomputable binding with its own word, keeps L4  CAUGHT
+X7 checker's pinned tokenizer hash differs from the file                         CAUGHT
+X8 checker's trust store lacks the decision map                                  CAUGHT
+X9 signed issuer: relabels g3 as read_file                                       CAUGHT
+X10 signed issuer: non-canonical arguments bytes                                 CAUGHT
+X11 signed issuer: the map link speaks of another token than the proof           CAUGHT
+X12 signed issuer: rewrites g3's answer token to an ALLOW token                  CAUGHT
+tamper cases caught: 12 of 12
+tamper_exit=0
+=== regression: C2a bundle + tamper suite
+RESULT: PASS
+tamper cases caught: 12 of 12
+=== regression: C1 tamper suite
+tamper cases caught: 12 of 12
+end=2026-11-10T05:12:49Z

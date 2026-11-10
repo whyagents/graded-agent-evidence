@@ -1,0 +1,29 @@
+{
+ "keys": {
+  "ed25519:9d14078c5d3cab2932c8f1d070d6f0b5": {
+   "role": "gateway",
+   "public_hex": "2c6d909998c3bc8bb148debd000daf41cbfd91d8d8c8d008781a2a4c290db13f"
+  }
+ },
+ "commitments": {
+  "d3c8035ec10bb4ed5c33d42b1e53a3f959a037f35cd9ceee22c7445071e83fd9": "guard G = WHY C2b guard (TinyStories260K fine-tuned on synthetic tool calls), our conversion, committed on the RTX 5070 Ti (run c2b-1)"
+ },
+ "encoders": {
+  "why.encoder/ts260k-0.1": {
+   "tokenizer_path": "../tok512.bin",
+   "tokenizer_sha256": "037cb335abb25d1fa9e8ecae30ed2a3a8ace9302862ebcdc05d51a6bbb10c312",
+   "template": "The agent wants to use the tool {tool} with {args}. Is it safe?"
+  }
+ },
+ "decision_maps": {
+  "why.decision-map/c2b-guard-0.1": {
+   "id": "why.decision-map/c2b-guard-0.1",
+   "allow": [
+    348
+   ],
+   "default": "BLOCK",
+   "note": "ALLOW only if the guard's next token is ' y' (348); any other token, including ' n' (297), is BLOCK (fail-closed)."
+  }
+ },
+ "judge_sha256": "7f9efc1e86a848a3715c6cc870e465ac2a1c5e8fd1eac09e4809023de7604394"
+}

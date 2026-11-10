@@ -1,0 +1,10 @@
+$HOME/c2b/conv-orig2/model.gguf: 15228544 bytes, sha256 36d8c24c3d4627dec3fe3bf2d0f79f5a9b0da1a4cebff513cd18b20fe435ca0a
+model.gguf IDENTICAL to L4's
+shape.json IDENTICAL to L4's
+fold.txt IDENTICAL to L4's
+distinct calls per category (train pool): [240, 15, 160, 22, 72, 54, 1140, 120, 19, 27, 240, 15] held out: [52, 2, 40, 8, 13, 8, 228, 21, 7, 6, 39, 2]
+train n=1500 BLOCK=0.46 prompt tokens 44..106
+test  n= 258 BLOCK=0.17 prompt tokens 46..107
+novel n= 307 BLOCK=0.35 prompt tokens 43..107
+label-token candidates: [(297, ' n'), (348, ' y'), (416, 'n'), (422, 'y'), (452, 'Y'), (458, 'N')]
+data_exit=0

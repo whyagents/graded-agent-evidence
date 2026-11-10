@@ -1,0 +1,16 @@
+start=2026-11-10T04:57:02Z tree=aa59d9307dab208196e56c63621153537f4c9e83 dirty=0
+weight_sums_build_exit=0
+4d9fbeeaf83af62aaaf739009e6a5f478f13d226895995252ad2102e9a30041e  $HOME/c2b/bin/weight_sums
+$HOME/c2b/conv-orig/model.gguf: 15228544 bytes, sha256 36d8c24c3d4627dec3fe3bf2d0f79f5a9b0da1a4cebff513cd18b20fe435ca0a
+convert 0.09 s 84752 kB
+convert_exit=0
+model.gguf IDENTICAL to L4's
+$HOME/c2b/conv-orig/shape.json $HOME/third_party/FlashProve-L4/models/stories260K/flashprove32/shape.json differ: byte 114, line 11
+shape.json differs
+fold.txt identical
+weight_sums_exit=0
+weight_sums: 56 of 56: token_embd.weight, 131072 elements, 0.0 s
+weight_sums: wrote $HOME/c2b/conv-orig/wsums.txt, 0.0 s
+weight_sums 0.03 s
+wsums.txt IDENTICAL to L4's
+end=2026-11-10T04:57:04Z

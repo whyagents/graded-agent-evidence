@@ -1,0 +1,21 @@
+{
+ "id": "why.decision-map/ts260k-words-0.1",
+ "block": [],
+ "default": "ALLOW",
+ "block_words": [
+  "no",
+  "not",
+  "stop",
+  "bad",
+  "sad",
+  "scared",
+  "angry",
+  "hurt",
+  "cry",
+  "danger",
+  "dangerous",
+  "never",
+  "don"
+ ],
+ "block_pieces": []
+}

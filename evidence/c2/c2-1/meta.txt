@@ -1,0 +1,41 @@
+run=c2-1 start=2026-11-09T17:44:30Z build=production(A9 build-real) model=TinyStories260K(L4 conversion) gpu_before=669MiB
+e69a95c4717c5bf2ad71ad577206205e83ee88ed826672ccc08999fe46a2d436  $HOME/cleanroom/build-real/hc/cp_commit
+c351fcac8fe66dd257237cf51c164c0cbd359b76a4d87753b5d2fe747591d20a  $HOME/cleanroom/build-real/hc/cp_prove
+36d8c24c3d4627dec3fe3bf2d0f79f5a9b0da1a4cebff513cd18b20fe435ca0a  $HOME/third_party/FlashProve-L4/models/stories260K/flashprove32/model.gguf
+0b670e34d0f502dbc298bac4c8c9a501c951d3dd5fd4a06f4a7f8d8de85c150a  $HOME/cleanroom/runs/c2-1/in/g1.req
+50aacad96d47d1aabee0515588cf3e95e9b5b004bea6f15766cfd59eefa682db  $HOME/cleanroom/runs/c2-1/in/g2.req
+a6ef56baad352840e05e5284a09c85500bef1635816eb92d0f8543f22f31c712  $HOME/cleanroom/runs/c2-1/in/g3.req
+ec4d1f0f6fc4bfe30bca6e427b8dd65550dd39c2e000a405b3e9196827b7f6e0  $HOME/cleanroom/runs/c2-1/in/g4.req
+cp_commit_exit=0 id=b15427156cef64a57acab36a566faf3628d5bc57d02db227bd722f74e3b9e2e1
+cp_prove_exit=1 last="	Exit status: 1"
+  Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.21
+  Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.26
+g1: no answer file
+g2: no answer file
+g3: no answer file
+g4: no answer file
+--- prove each (start 2026-11-09T17:45:14Z), id from our cp_commit: b15427156cef64a57acab36a566faf3628d5bc57d02db227bd722f74e3b9e2e1
+g1 prove exit=0 time=2.16_s|962392_kB|0 last="p258 end 0"
+g1 verify exit=0 last="YES" token=13 proof_bytes=5598628
+    covered: r=255 e=256 T=256 C=256 theta=256 cap=0 s=20 sh=8 positions=255..255 tokens=none y=yes next-token=yes policy=exact-match above-clip=0 (places in the request, counted from 0; y=yes: the answer
+    commitment: 47 closeness rounds of the one-time files rest on another source than the bound within a third of the distance; the table has a record: the binding of the weights rests on the theorem on c
+    proof of work: up to 8 bits counted in 40 rounds; with it the least round has 128.00 bits, without it 120.31 bits
+    result-v1 status=0 claim=next-token id=b15427156cef64a57acab36a566faf3628d5bc57d02db227bd722f74e3b9e2e1 bits=128 work=8 work-rounds=40 least-round=128.00 least-round-without-work=120.31 commitment-ass
+g2 prove exit=0 time=5.46_s|961988_kB|0 last="p258 end 0"
+g2 verify exit=0 last="YES" token=13 proof_bytes=5603948
+    covered: r=255 e=256 T=256 C=256 theta=256 cap=0 s=20 sh=8 positions=255..255 tokens=none y=yes next-token=yes policy=exact-match above-clip=0 (places in the request, counted from 0; y=yes: the answer
+    commitment: 47 closeness rounds of the one-time files rest on another source than the bound within a third of the distance; the table has a record: the binding of the weights rests on the theorem on c
+    proof of work: up to 8 bits counted in 40 rounds; with it the least round has 128.00 bits, without it 120.31 bits
+    result-v1 status=0 claim=next-token id=b15427156cef64a57acab36a566faf3628d5bc57d02db227bd722f74e3b9e2e1 bits=128 work=8 work-rounds=40 least-round=128.00 least-round-without-work=120.31 commitment-ass
+g3 prove exit=0 time=2.12_s|960292_kB|0 last="p258 end 0"
+g3 verify exit=0 last="YES" token=436 proof_bytes=5589508
+    covered: r=255 e=256 T=256 C=256 theta=256 cap=0 s=20 sh=8 positions=255..255 tokens=none y=yes next-token=yes policy=exact-match above-clip=0 (places in the request, counted from 0; y=yes: the answer
+    commitment: 47 closeness rounds of the one-time files rest on another source than the bound within a third of the distance; the table has a record: the binding of the weights rests on the theorem on c
+    proof of work: up to 8 bits counted in 40 rounds; with it the least round has 128.00 bits, without it 120.31 bits
+    result-v1 status=0 claim=next-token id=b15427156cef64a57acab36a566faf3628d5bc57d02db227bd722f74e3b9e2e1 bits=128 work=8 work-rounds=40 least-round=128.00 least-round-without-work=120.31 commitment-ass
+g4 prove exit=0 time=2.07_s|960548_kB|0 last="p258 end 0"
+g4 verify exit=0 last="YES" token=13 proof_bytes=5602452
+    covered: r=255 e=256 T=256 C=256 theta=256 cap=0 s=20 sh=8 positions=255..255 tokens=none y=yes next-token=yes policy=exact-match above-clip=0 (places in the request, counted from 0; y=yes: the answer
+    commitment: 47 closeness rounds of the one-time files rest on another source than the bound within a third of the distance; the table has a record: the binding of the weights rests on the theorem on c
+    proof of work: up to 8 bits counted in 40 rounds; with it the least round has 128.00 bits, without it 120.31 bits
+    result-v1 status=0 claim=next-token id=b15427156cef64a57acab36a566faf3628d5bc57d02db227bd722f74e3b9e2e1 bits=128 work=8 work-rounds=40 least-round=128.00 least-round-without-work=120.31 commitment-ass

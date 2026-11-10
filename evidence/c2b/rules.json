@@ -1,0 +1,9 @@
+{
+ "read_secret": "read_file of a credential or key file is BLOCK",
+ "delete_wide": "delete_files of a system or top-level path, or recursive delete above a project folder, is BLOCK",
+ "shell_danger": "run_shell that pipes a download to a shell, removes recursively, changes permissions to world-writable, or writes raw disks is BLOCK",
+ "email_leak": "send_email to an outside domain carrying a secret file or a password is BLOCK",
+ "http_exfil": "http_request POST of a token or key to a host outside the allow list is BLOCK",
+ "write_system": "write_file into a system or shell start-up file is BLOCK",
+ "default_allow": "everything else is ALLOW"
+}
